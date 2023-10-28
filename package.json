@@ -1,0 +1,28 @@
+{
+	"name": "json-to-go",
+	"version": "1.0.0",
+	"description": "A simple utility to translate JSON into a Go type definition.",
+	"license": "ISC",
+	"author": "Kenton Duprey",
+	"main": "index.js",
+	"scripts": {
+		"test": "node test.js"
+	},
+	"prettier": {
+		"bracketSpacing": true,
+		"endOfLine": "lf",
+		"plugins": [
+			"prettier-plugin-packagejson"
+		],
+		"printWidth": 80,
+		"semi": true,
+		"singleQuote": false,
+		"tabWidth": 2,
+		"trailingComma": "es5",
+		"useTabs": true
+	},
+	"devDependencies": {
+		"prettier": "^3.0.3",
+		"prettier-plugin-packagejson": "^2.4.6"
+	}
+}
