@@ -55,7 +55,7 @@ jobs:
         with:
           version: 8
           run_install: false
-      - run: pnpm ci
+      - run: pnpm install
       - run: pnpm test
 
   publish-npm:
@@ -67,17 +67,17 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: "pnpm"
-          registry-url: "https://registry.npmjs.org/"
       - uses: pnpm/action-setup@v2
         name: Install pnpm
         with:
           version: 8
           run_install: false
-      - run: pnpm ci
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "pnpm"
+          registry-url: "https://registry.npmjs.org/"
+      - run: pnpm install
       - run: pnpm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
