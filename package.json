@@ -1,6 +1,6 @@
 {
 	"name": "json-to-go",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A simple utility to translate JSON into a Go type definition.",
 	"repository": {
 		"url": "https://github.com/kduprey/json-to-go"
